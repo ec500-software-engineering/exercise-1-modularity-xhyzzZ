@@ -1,0 +1,2 @@
+patient-001 20 male 70 90 120 100 37 2
+patient-002 22 female 65 95 600 90 36.5 2
