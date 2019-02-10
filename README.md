@@ -17,5 +17,5 @@
     Signal Loss condition:  False
     Shock Alert condition:  False
     Oxygen Supply condition:  False
-    Fever condition False
+    Fever condition:  False
     Blood Pressure condition:  True
