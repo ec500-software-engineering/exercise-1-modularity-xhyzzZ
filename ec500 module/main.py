@@ -1,6 +1,7 @@
 from inputModule import inputApi
 from checkModule import Analyzer
 import outputModule
+from datetime import datetime as dt
 
 def main():
     ##user_id, age, gender, heartrate, Systolic_BP, Diastolic_BP, blood_oxygen, temperature, time
@@ -9,9 +10,13 @@ def main():
     file = open("inputInformation.txt")
     for index, line in enumerate(file):
         words = line.split( )
-        data[index] = inputApi(words[0], words[1], words[2], words[3], words[4], words[5], words[6], words[7], words[8]).dic
+        data[index] = inputApi(words[0], words[1], words[2], words[3], words[4], words[5], words[6], words[7], dt.now()).dic
 
     for key in data.keys():
+        userID = data[key]["user_id"]
+        gender = data[key]["gender"]
+        age = data[key]["age"]
+        outputModule.print_title(userID, gender, age)
         ##Systolic_BP, Diastolic_BP, Heart_Rate, Heart_Oxygen_Level, Body_temp
         res = Analyzer(data[key]["Systolic_BP"], data[key]["Diastolic_BP"], data[key]["heartrate"], data[key]["blood_oxygen"], data[key]["temperature"])
             ##Heart_Rate, Body_temp
@@ -26,10 +31,11 @@ def main():
         hypotension = res.Hypotension(data[key]["Systolic_BP"], data[key]["Diastolic_BP"])
         ##Systolic_BP, Diastolic_BP
         hypertension = res.Hypertension(data[key]["Systolic_BP"], data[key]["Diastolic_BP"])
-        ##Singal_Loss, Shock_Alert, Oxygen_Supply, Fever, Hypotension, Hypertension
-        output = outputModule.receive_basic_iuput_data(signal_Loss, shock_Alert, oxygen_Supply, fever, hypotension, hypertension)
-        for alert in output.keys():
-            print(data[key]["user_id"] + " " + alert + ":" + " " + (str)(output[alert]))
+        ##print patient basic data
+        outputModule.print_patient_data(data[key]['Systolic_BP'], data[key]['Diastolic_BP'], \
+                                        data[key]['heartrate'], data[key]['blood_oxygen'], data[key]['temperature'])
+        ##print alert
+        outputModule.print_system_or_body_alert(signal_Loss, shock_Alert, oxygen_Supply, fever, hypotension, hypertension)
 
 if __name__ == '__main__':
     main()

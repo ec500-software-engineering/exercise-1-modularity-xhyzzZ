@@ -1,4 +1,25 @@
-class inputApi:
+main.py
+from inputModule import inputModule
+from checkModule import checkModule
+
+def main():
+    ##user_id, age, gender, heartrate, Systolic_BP, Diastolic_BP, blood_oxygen, temperature, time
+    data = {}
+    ##user_id, age, gender, heartrate, Systolic_BP, Diastolic_BP, blood_oxygen, temperature, time
+    data[0] = inputModule('001', 20, 'male', 70, 90, 120, 100, 37, 1).dic
+    data[1] = inputModule('002', 18, 'male', 20, 90, 120, 100, 37, 1).dic
+    data[2] = inputModule('003', 15, 'female', 60, 80, 100, 60, 36.5, 1).dic
+    check = checkModule()
+    check.
+    print(data)
+
+
+if __name__ == '__main__':
+    main()
+
+
+inputModule.py
+class inputModule:
 
     def __init__(self, user_id, age, gender, heartrate, Systolic_BP, Diastolic_BP, blood_oxygen, temperature, time):
 
@@ -11,7 +32,7 @@ class inputApi:
         self.blood_oxygen = blood_oxygen
         self.temperature = temperature
         self.time = time
-        self.dic = {"user_id": user_id, "age": age, "gender": gender, "heartrate": heartrate,
+        self.dic = {"user_id": user_id, "gender": gender, "heartrate": heartrate,
                     "Diastolic_BP": Diastolic_BP, "Systolic_BP":Systolic_BP, "blood_oxygen": blood_oxygen,
                     "temperature": temperature, "time": time}
 

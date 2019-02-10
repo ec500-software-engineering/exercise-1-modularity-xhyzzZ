@@ -1,5 +1,6 @@
 import numpy as np
 from AIModule import AI_module
+from datetime import datetime as dt
 
 
 def receive_basic_iuput_data(Singal_Loss, Shock_Alert, Oxygen_Supply, Fever, Hypotension, Hypertension):
@@ -21,27 +22,38 @@ def receive_basic_iuput_data(Singal_Loss, Shock_Alert, Oxygen_Supply, Fever, Hyp
     if (Hypertension == True):
         BasicResult['Hypertension'] = True
 
-    return BasicResult
+def print_system_or_body_alert(signal_Loss, shock_Alert, oxygen_Supply, fever, hypotension, hypertension):
+    print("**Body Alert**")
+    print("Time: ", dt.now())
+    print('Signal Loss condition: ', signal_Loss)
+    print('Shock Alert condition: ', shock_Alert)
+    print('Oxygen Supply condition: ', oxygen_Supply)
+    print('Fever condition', fever)
+    print('Blood Pressure condition: ', hypotension or hypertension)
 
+
+def print_patient_data(Systolic_BP, Diastolic_BP, Heart_Rate, Oxygen_Supply, Body_temp):
+    print("Time: ", dt.now())
+    print('Systolic Blood Pressure: ', Systolic_BP)
+    print('Diastolic Blood Pressure: ', Diastolic_BP)
+    print('Heart Rate: ', Heart_Rate)
+    print('Heart Oxygen Level', Oxygen_Supply)
+    print('Body Temperature: ', Body_temp)
+
+def print_title(patientID, gender, age):
+    print("Welcome to the Patient Montitoring System")
+    print("********************************************")
+    print('Patient ID: ', patientID)
+    print('Age: ', age)
+    print('Gender:', gender)
+    print("********************************************")
+    print("**Body Condition**")
 
 # def send_basic_input_data(BasicResult, BasicData):
 ## Receive the result and show it on terminal or web page
 #   sentData = analyze(BasicResult)
 #   return sentData, BasicData
 
-
-def display_AI_iuput_data():
-    ## Recevie AI data from input module, then analyze it using some judge functions to generate boolean result
-    ## Paramter is boolean
-    ## If paramter is True, means it should be alerted, then add it to the array
-
-    AI_module.AI_Module(Blood_oxygen, Blood_pressure, Pulses)
-    print('blood pressure prediction:')
-    print(pressure_predict_result)
-    print('blood oxygen prediction:')
-    print(oxygen_predict_result)
-    print('Pulse_predict_result:')
-    print(Pulse_predict_result)
 
 # def send_AI_input_data(AIResult):
 ## Receive the result and show it on terminal or web page

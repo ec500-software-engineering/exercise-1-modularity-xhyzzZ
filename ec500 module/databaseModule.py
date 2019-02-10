@@ -9,7 +9,6 @@ database = connection['my_database']
 
 #create collection
 collection = database['my_collection']
-print("Database connected")
 
 
 def insert(data):
