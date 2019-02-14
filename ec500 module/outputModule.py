@@ -41,7 +41,7 @@ def print_patient_data(Systolic_BP, Diastolic_BP, Heart_Rate, Oxygen_Supply, Bod
     print('Body Temperature: ', Body_temp)
 
 def print_title(patientID, gender, age):
-    print("Welcome to the Patient Montitoring System")
+    print("\n\nWelcome to the Patient Montitoring System")
     print("********************************************")
     print('Patient ID: ', patientID)
     print('Age: ', age)
