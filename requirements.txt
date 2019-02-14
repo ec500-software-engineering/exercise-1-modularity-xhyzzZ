@@ -1,2 +1,4 @@
+urllib3
+
+flake8
 pytest
-urllib3==1.4
