@@ -1,7 +1,8 @@
 ## Design Architecture:
 
 <img align = center src = "https://github.com/leonshen95/EC500/blob/master/EC500%20diagram%201.jpg?raw=true">
-My data pipeline is Input -> check -> immediate output
+My data pipeline is input -> check -> immediate output
+I use random number to make 10 threads in a thread pool and let each thread select one random patient to detect and print it information out. Also, I use random sleep time to make 10 threads run concurrently.
 
 ## Outcome Display:
 Run MultiThread.py and the data directory is PatientInformation, which has ten patient information.
@@ -69,3 +70,4 @@ Run MultiThread.py and the data directory is PatientInformation, which has ten p
     Blood Pressure condition:  True
     Thread 6 slept for 3 seconds
 
+## Pros and cons:
