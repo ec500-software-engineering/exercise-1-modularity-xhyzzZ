@@ -78,7 +78,7 @@ Run MultiThread.py and the data directory is PatientInformation, which has ten p
 * Cons: This multi-threading is more like a queue, if a subthread is finished, then next thread can be excuted. We still want to realize multithread without queuing. That will be a bouns for this project.
 
 ## Some attention:
-We should install urllib3.connectionpool to use xrange random method.  
+We should install [urllib3.connectionpool](https://urllib3.readthedocs.io/en/1.4/pools.html) to use xrange random method.  
 ```
    # Read random file from PatientInformation directory
    file_path = r'/Users/kobale/EC500/PatientInformation'
