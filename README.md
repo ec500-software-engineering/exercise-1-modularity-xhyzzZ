@@ -80,7 +80,7 @@ Run MultiThread.py and the data directory is PatientInformation, which has ten p
 ## Some attention:
 We should install [urllib3.connectionpool](https://urllib3.readthedocs.io/en/1.4/pools.html) to use xrange random method.  
 ```
-   # Read random file from PatientInformation directory
-   file_path = r'/Users/kobale/EC500/PatientInformation'
+# Read random file from PatientInformation directory
+file_path = r'/Users/kobale/EC500/PatientInformation'
 ```
 In this code, I import file in my local directory, if you want to run the code, you must change patient information directoty.
