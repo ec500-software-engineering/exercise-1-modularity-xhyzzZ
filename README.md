@@ -1,4 +1,7 @@
 ## Design Architecture:
+
+<img align = center src = "https://github.com/leonshen95/EC500/blob/master/EC500%20diagram%201.jpg?raw=true">
+
 ## Outcome Display:
 Run MultiThread.py and the data directory is PatientInformation, which has ten patient information.
 
