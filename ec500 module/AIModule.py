@@ -18,9 +18,9 @@ class AI_module(object):
         # get dictionary from database
         for key in infoDB:
             if key == ID:
-                pressure = info['blood_pressure']
-                oxygen = info['blood_oxygen']
-                Pulse = info['blood_pulses']
+#                 pressure = info['blood_pressure']
+#                 oxygen = info['blood_oxygen']
+#                 Pulse = info['blood_pulses']
                 Blood_pressure.append(pressure)
                 Blood_oxygen.append(oxygen)
                 Pulses.append(Pulse)
