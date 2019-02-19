@@ -13,8 +13,7 @@ class AI_module(object):
         Blood_oxygen = []
         Blood_pressure = []
         Pulses = []
-
-        info = DataBaseModule().search(ID)
+        
         # Username = input("")
         # get dictionary from database
         for key in infoDB:
