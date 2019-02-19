@@ -1,5 +1,4 @@
 import numpy as np
-import databaseModule
 
 # Input: ID(from main function perhaps), infoDB(from Database function)
 # output: Three predicted parameters, three Alert signals(Type:Boolean
